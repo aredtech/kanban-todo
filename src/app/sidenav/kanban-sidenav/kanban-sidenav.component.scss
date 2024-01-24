@@ -1,0 +1,110 @@
+.kanban-sidenav-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+
+  @media screen and (max-width: 576px) {
+    flex-direction: row;
+  }
+
+  .kanban-sidenav-top {
+    @media screen and (max-width: 576px) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+.kanban-sidenav__profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 1rem 2rem 1rem;
+
+  .kanban-sidenav__profile-details {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .kanban-sidenav__profile-details__img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 41px;
+      aspect-ratio: 1/1;
+      height: 50px;
+      border: 1px solid #667085;
+      border-radius: 5px;
+
+      span {
+        color: var(--sidenavIcons);
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        border-radius: 5px;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: -0.03rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 120px;
+    }
+  }
+
+  .kanban-sidenav__profile__arrow-down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background: #f2f4f7;
+    }
+  }
+}
+
+.kanban-sidenav__menu-size {
+  width: 2rem;
+  height: 2rem;
+  background: #f2f4f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 50%;
+  position: absolute;
+  right: -13px;
+  top: 40vh;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
+}
+
+.kanban-sidenav__list {
+  margin: 1rem;
+
+  @media screen and (max-width: 576px) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.kanban-sidenav-bottom {
+  margin: 1rem;
+}

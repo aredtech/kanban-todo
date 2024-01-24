@@ -1,0 +1,29 @@
+@use "./variables" as var;
+
+@import url("./material_theming.scss");
+
+@mixin lightTheme() {
+  --bgSidenav: #{var.$sidenavBackground_light};
+  --sidenavIcons: #{var.$sidenavIcon_light};
+  --bgBody: #{var.$bodyBackground_light};
+  --textSidenavItem: #{var.$sidenavItemText_light};
+  --textSidenavItemActive: #{var.$sidenavItemTextActive_light};
+  --sidenavHover: #{var.$sidenavHover_light};
+}
+
+@mixin darkTheme() {
+  --bgSidenav: #{var.$sidenavBackground_dark};
+  --bgBody: #{var.$bodyBackground_dark};
+  --sidenavIcons: #{var.$sidenavIcon_dark};
+  --textSidenavItem: #{var.$sidenavItemText_dark};
+  --textSidenavItemActive: #{var.$sidenavItemTextActive_dark};
+  --sidenavHover: #{var.$sidenavHover_dark};
+}
+
+body.dark {
+  @include darkTheme();
+}
+
+body.light {
+  @include lightTheme();
+}

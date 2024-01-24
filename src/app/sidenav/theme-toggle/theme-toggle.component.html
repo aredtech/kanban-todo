@@ -1,0 +1,14 @@
+<div
+  class="theme-toggle"
+  (click)="handleThemeToggleClick()"
+  [class.theme-toggle--dark]="darkTheme"
+  [class.theme-toggle--small]="smallWidth"
+>
+  <div class="theme-toggle__button" *ngIf="!smallWidth"></div>
+  <div class="theme-toggle--moon">
+    <span class="material-symbols-outlined"> dark_mode </span>
+  </div>
+  <div class="theme-toggle--sun">
+    <span class="material-symbols-outlined"> light_mode </span>
+  </div>
+</div>

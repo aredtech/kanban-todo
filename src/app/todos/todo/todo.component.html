@@ -1,0 +1,11 @@
+<div class="kanban-todo">
+  <h1>
+    {{ todo.header }}
+  </h1>
+  <div class="kanban-todo__info">
+    <p>{{ todo.created_date | date : "MMM d" }}</p>
+    &bull;
+    <p>Created by {{ todo.created_by }}</p>
+  </div>
+  <p class="kanban-todo__content">{{ todo.content }}</p>
+</div>

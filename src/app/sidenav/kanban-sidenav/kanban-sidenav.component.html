@@ -1,0 +1,48 @@
+<div class="kanban-sidenav-container">
+  <div class="kanban-sidenav-top">
+    <div class="kanban-sidenav__profile">
+      <div class="kanban-sidenav__profile-details">
+        <div class="kanban-sidenav__profile-details__img">
+          <!-- <span class="material-symbols-outlined"> person </span> -->
+          <img
+            src="https://images.pexels.com/photos/19877105/pexels-photo-19877105/free-photo-of-traditional-mongolian-archer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt=""
+          />
+        </div>
+        <p
+          [@navMenuItemEntry]="smallWidth ? 'closed' : 'open'"
+          *ngIf="!smallWidth"
+        >
+          Raju Mandal
+        </p>
+      </div>
+      <div class="kanban-sidenav__profile__arrow-down" *ngIf="!smallWidth">
+        <span class="material-symbols-outlined"> expand_more </span>
+      </div>
+    </div>
+
+    <ul class="kanban-sidenav__list">
+      <ng-container *ngFor="let item of menuItems">
+        <app-kanban-sidenav-item
+          [item]="item"
+          (navItemClick)="activeNavItem = $event"
+          [activeItem]="activeNavItem"
+          [smallWidth]="smallWidth"
+        ></app-kanban-sidenav-item>
+      </ng-container>
+    </ul>
+  </div>
+  <div class="kanban-sidenav-bottom">
+    <div class="theme-toggle-container">
+      <app-theme-toggle [smallWidth]="smallWidth"></app-theme-toggle>
+    </div>
+  </div>
+</div>
+
+<div
+  class="kanban-sidenav__menu-size"
+  [ngStyle]="smallWidth ? { transform: 'rotate(180deg)' } : {}"
+  (click)="handleResizeButtonClick()"
+>
+  <span class="material-symbols-outlined"> arrow_back_ios_new </span>
+</div>

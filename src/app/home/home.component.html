@@ -1,0 +1,17 @@
+<div class="kanban-home">
+  <h4>Today</h4>
+  <section class="kanban-home__section">
+    <ng-container *ngFor="let todo of todos; let i = index">
+      <app-todo [todo]="todo"> </app-todo>
+    </ng-container>
+  </section>
+  <h4>Today</h4>
+  <section class="kanban-home__section">
+    <ng-container *ngFor="let todo of todos; let i = index">
+      <app-todo [todo]="todo"> </app-todo>
+    </ng-container>
+  </section>
+</div>
+<div class="kanban-new-todo">
+  <span class="material-symbols-outlined"> new_window </span>
+</div>

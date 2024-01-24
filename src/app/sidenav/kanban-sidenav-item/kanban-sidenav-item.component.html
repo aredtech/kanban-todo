@@ -1,0 +1,15 @@
+<li
+  class="kanban-sidenav__item"
+  [class.kanban-sidenav__item__active]="item == activeItem"
+  (click)="handleNavItemClick()"
+>
+  <div class="kanban-sidenav__item__detail">
+    <span class="material-symbols-outlined"> {{ item.icon }} </span>
+    <p [@navMenuItemEntry]="smallWidth ? 'closed' : 'open'" *ngIf="!smallWidth">
+      {{ item.name }}
+    </p>
+  </div>
+  <div class="kanban-sidenav__item__count" *ngIf="!smallWidth">
+    {{ item.notificationCount }}
+  </div>
+</li>

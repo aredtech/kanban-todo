@@ -1,0 +1,62 @@
+.kanban-sidenav__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: background 0.5s;
+
+  &:hover {
+    background: var(--sidenavHover);
+  }
+
+  .kanban-sidenav__item__detail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: -0.03rem;
+      color: var(--textSidenavItem);
+      overflow: hidden;
+    }
+
+    span {
+      color: var(--sidenavIcons);
+    }
+  }
+
+  .kanban-sidenav__item__count {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: #f2f4f7;
+    color: #344054;
+  }
+}
+
+.kanban-sidenav__item__active {
+  background: var(--sidenavHover);
+
+  .kanban-sidenav__item__count {
+    background: #000;
+    color: #fff;
+  }
+
+  .kanban-sidenav__item__detail {
+    p,
+    span {
+      color: #1d2939;
+    }
+  }
+}

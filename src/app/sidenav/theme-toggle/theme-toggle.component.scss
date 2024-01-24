@@ -1,0 +1,76 @@
+.theme-toggle {
+  width: 6rem;
+  height: 2.5rem;
+  border: 3px solid #e4e7ec;
+  border-radius: 100vw;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+
+  .theme-toggle__button {
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: #ffeccf;
+    box-shadow: inset 0px 0px 0px 4px #ffbb52;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(4px, 2px);
+    transition: transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71);
+  }
+
+  .theme-toggle--moon {
+    position: absolute;
+    transform: translate(6px, 5px) rotate(20deg);
+    transition: opacity 150ms, transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71);
+    opacity: 0;
+    span {
+      color: #fff;
+    }
+  }
+
+  .theme-toggle--sun {
+    position: absolute;
+    transform: translate(61px, 4px) rotate(20deg);
+    opacity: 1;
+    transition: opacity 150ms, transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71);
+  }
+}
+
+.theme-toggle--dark {
+  background-color: #374151;
+
+  .theme-toggle__button {
+    transform: translate(58px, 2px);
+    background-color: #374151;
+    box-shadow: inset 0px 0px 0px 4px #fff;
+  }
+
+  .theme-toggle--sun {
+    opacity: 0;
+    transform: translate(61px, 4px) rotate(0deg);
+  }
+
+  .theme-toggle--moon {
+    opacity: 1;
+    transform: translate(6px, 5px) rotate(0);
+  }
+}
+
+.theme-toggle--small {
+  width: 2.5rem;
+
+  .theme-toggle--dark {
+    .theme-toggle__button {
+      transform: translate(58px, 2px);
+    }
+  }
+
+  .theme-toggle--sun {
+    position: absolute;
+    transform: translate(6px, 5px);
+  }
+}

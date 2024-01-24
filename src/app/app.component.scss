@@ -1,0 +1,31 @@
+.kanban-body {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  height: 100dvh;
+
+  @media screen and (max-width: 576px) {
+    flex-direction: column-reverse;
+  }
+
+  .kanban-sidenav {
+    min-width: 300px;
+    height: 100%;
+    transition: all 200ms cubic-bezier(1, 0.03, 0.62, 1.09);
+    background: var(--bgSidenav);
+    position: relative;
+  }
+
+  .sidenav-mobile {
+    min-width: 73px;
+  }
+
+  .kanban-pages {
+    transition: width 0.2s;
+    width: 100%;
+    @media screen and (max-width: 576px) {
+      max-height: 90dvh;
+      height: 100%;
+    }
+  }
+}
